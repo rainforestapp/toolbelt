@@ -1,5 +1,11 @@
 <!doctype html>
-<html><head><script type="text/javascript">
-    const url = new URL(window.location.href);
-    setTimeout(() => {window.location = url.searchParams.get("to"); }, 5000);
-</script></head></html>
+<html>
+    <body style="width: 100%; margin: 0, auto; text-align: center; padding-top: 42px; font-family: sans-serif; font-size: 16pt;">
+        You will be redirected to <span id="url" style="text-decoration: underline;"></span>
+        <script type="text/javascript">
+            const targetUrl = (new URL(window.location.href)).searchParams.get("to");
+            setTimeout(() => {window.location = targetUrl; }, 5000);
+            document.getElementById("url").innerText = targetUrl;
+        </script>
+    </body>
+</html>
