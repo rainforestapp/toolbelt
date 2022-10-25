@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+    <head>
+        <script type="text/javascript">
+            setTimeout(() => {
+                const url = new URL(window.location.href);
+                window.location = url.searchParams.get("from");
+            }, 1000);
+        </script>
+    </head>
+</html>
